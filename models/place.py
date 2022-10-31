@@ -6,6 +6,7 @@ from models.base_models import BaseModel
 
 
 class Place(BaseModel):
+    """ Class for managing place objects """
 
     city_id = ""
     user_id = ""
@@ -18,6 +19,3 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(args, **kwargs)
