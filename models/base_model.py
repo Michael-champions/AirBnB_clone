@@ -53,3 +53,4 @@ class BaseModel():
                     self.__dict__[key])
         object_dict['__class__'] = self.__class__.__name__
         return (object_dict)
+
