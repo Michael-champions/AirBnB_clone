@@ -4,7 +4,6 @@
 # uncomment for easy debugging
 #set -x
 
-
 # colors
 blue='\e[1;34m'
 #brown='\e[0;33m'
