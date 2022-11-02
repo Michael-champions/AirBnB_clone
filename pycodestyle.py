@@ -1,20 +1,11 @@
-# This code translates text input from user into pig latin
-# Import libraries
+import unittest
+import pycodestyle
 
-import numpy as np
-import pandas as pd
+class TestCodeFormat(unittest.TestCase):
 
-# Take the users input
-words = raw_input("Enter some text to check: ")
-
-# Break apart the words into a list0
-
-words_list = words.split(' ')
-for word in words_list:
-    if len(word) >= 3:
-
-        pig_latin = word + "%say" % (word[0])
-        pig_latin = pig_latin[1:]
-        print(pig_latin)
-    else:
-        pass
+    def test_conformance(self):
+        """Test that the scripts conform to PEP-8."""
+        style = pycodestyle.StyleGuide(quiet=True)
+        result = style.check_files(['file1.py', 'file2.py'])
+        self.assertEqual(result.total_errors, 0, "Found style  
+        errors")
